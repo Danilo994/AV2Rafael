@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AV2Rafael.props" />
+</Project>
