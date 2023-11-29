@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AV2Rafael")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+296e872babf141a3c6e8f3830db654394fdf374b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AV2Rafael")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AV2Rafael")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

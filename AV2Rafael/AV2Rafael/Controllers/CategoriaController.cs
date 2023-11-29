@@ -1,10 +1,12 @@
 ﻿using AV2Rafael.Models;
 using AV2Rafael.Repositories;
 using AV2Rafael.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AV2Rafael.Controllers
 {
+    [Authorize]
     public class CategoriaController : Controller
     {
         private ServiceCategoria _ServiceCategoria;
