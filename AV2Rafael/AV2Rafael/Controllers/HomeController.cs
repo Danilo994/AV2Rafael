@@ -18,7 +18,7 @@ namespace AV2Rafael.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Grupo()
         {
             return View();
         }
