@@ -14,5 +14,14 @@ namespace AV2Rafael.Repositories
         {
 
         }
+
+        public async Task IncluirAsync(List<Produto> listaProdutos)
+        {
+            foreach (var item in listaProdutos)
+            {
+                _context.Entry(item).State = Microsoft.EntityFrameworkCore.EntityState.Added;
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

@@ -1,0 +1,97 @@
+﻿@model AV2Rafael.Models.Produto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Produto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" id="txtNome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" id="txtQuantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" id="txtPreco" class="form-control" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCategoria" class="control-label"></label>
+                <select asp-for="IdCategoria" id="cboCategoria" class ="form-control" asp-items="ViewBag.IdCategoria"></select>
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary" onclick="adicionar()">Incluir</button>
+            </div>
+            <div>
+                <table class="table" id="tabelaProdutos">
+                    <thead>
+                        <tr>
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Quantidade
+                            </th>
+                            <th>
+                                Preço
+                            </th>
+                            <th>
+                                Categoria
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        function adicionar() {
+            var contador = $("#tabelaProdutos tbody tr").length;
+            var nome = $("#txtNome").val();
+            var categoria = $("#cboCategoria option:selected").text();
+            var idCategoria = $("#cboCategoria").val();
+            var quantidade = $("#txtQuantidade").val();
+            var preco = $("#txtPreco").val();
+            if (nome == "" || idCategoria == "" || quantidade == "" || preco == "") {
+                alert("Todos os campos são obrigatórios");
+                return;
+            }
+            var linha = `<tr><td>${nome}<input type="hidden" name="ListaProdutos[${contador}].Nome" value="${nome}"></td>` +
+                `<td>${quantidade}<input type="hidden" name="ListaProdutos[${contador}].Quantidade" value="${quantidade}"></td>` +
+                `<td>${preco}<input type="hidden" name="ListaProdutos[${contador}].Preco" value="${preco}"></td>` +
+                `<td>${categoria}<input type="hidden" name="ListaProdutos[${contador}].idCategoria" value="${idCategoria}"></td>`;
+            $("#tabelaProdutos tbody").append(linha);
+            $("#txtNome").val("");
+            $("#cboCategoria").val("");
+            $("#txtNome").val("");
+            $("#txtQuantidade").val("");
+            $("#txtPreco").val("");
+        }
+    </script>
+}

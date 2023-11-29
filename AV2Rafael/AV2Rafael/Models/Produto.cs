@@ -35,4 +35,5 @@ public partial class Produto
     [ForeignKey("IdCategoria")]
     [InverseProperty("Produto")]
     public virtual Categoria IdCategoriaNavigation { get; set; }
+    public List<object> ListaProdutos { get; set; }
 }
