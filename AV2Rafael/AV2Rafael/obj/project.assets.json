@@ -11656,19 +11656,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucas\\.nuget\\packages\\": {}
+    "C:\\Users\\DANILOARRABALDOCARMO\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Algoritmos e programação\\Asp.net\\Inventario\\AV2Rafael\\AV2Rafael\\AV2Rafael\\AV2Rafael.csproj",
+      "projectUniqueName": "C:\\Users\\DANILOARRABALDOCARMO\\Desktop\\Git\\AV2Rafael\\AV2Rafael\\AV2Rafael\\AV2Rafael.csproj",
       "projectName": "AV2Rafael",
-      "projectPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Algoritmos e programação\\Asp.net\\Inventario\\AV2Rafael\\AV2Rafael\\AV2Rafael\\AV2Rafael.csproj",
-      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Algoritmos e programação\\Asp.net\\Inventario\\AV2Rafael\\AV2Rafael\\AV2Rafael\\obj\\",
+      "projectPath": "C:\\Users\\DANILOARRABALDOCARMO\\Desktop\\Git\\AV2Rafael\\AV2Rafael\\AV2Rafael\\AV2Rafael.csproj",
+      "packagesPath": "C:\\Users\\DANILOARRABALDOCARMO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DANILOARRABALDOCARMO\\Desktop\\Git\\AV2Rafael\\AV2Rafael\\AV2Rafael\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DANILOARRABALDOCARMO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
