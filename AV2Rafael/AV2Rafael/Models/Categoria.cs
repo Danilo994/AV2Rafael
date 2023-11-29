@@ -13,10 +13,10 @@ public partial class Categoria
     [Key]
     [Column("idCategoria")]
     public int IdCategoria { get; set; }
-
-    [Required]
+    [Display(Name = "Categoria")]
     [StringLength(255)]
     [Unicode(false)]
+    [Required(ErrorMessage = "O campo Nome é obrigatório.")]
     public string Nome { get; set; }
 
     [Column(TypeName = "datetime")]

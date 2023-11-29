@@ -17,11 +17,13 @@ public partial class Produto
     [Required]
     [StringLength(255)]
     [Unicode(false)]
+    [Display(Name = "Produto")]
     public string Nome { get; set; }
 
     public int Quantidade { get; set; }
 
     [Column(TypeName = "money")]
+    [Display(Name = "Preço")]
     public decimal Preco { get; set; }
 
     [Column(TypeName = "datetime")]

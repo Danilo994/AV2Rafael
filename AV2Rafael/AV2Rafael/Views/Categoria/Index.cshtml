@@ -5,10 +5,10 @@
 <h1>Categoria</h1>
 
 <p>
-    <a asp-action="Create">Incluir Categoria</a>
+    <a asp-action="Create" class="btn btn-primary">Incluir Categoria</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-primary table-borderless table-st">
+    <thead class="table-secondary">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
@@ -29,9 +29,9 @@
                 @Html.DisplayFor(modelItem => item.DataCriacao)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdCategoria">Alterar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdCategoria">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdCategoria">Excluir</a>
+                <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.IdCategoria">Alterar</a> |
+                <a asp-action="Details" class="btn btn-info" asp-route-id="@item.IdCategoria">Detalhes</a> |
+                <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.IdCategoria">Excluir</a>
             </td>
         </tr>
 }
