@@ -10,7 +10,6 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
@@ -28,15 +27,17 @@
                 <span asp-validation-for="Preco" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdCategoria" class="control-label"></label>
+                <label asp-for="IdCategoria" class="control-label">Categoria</label>
                 <select asp-for="IdCategoria" id="cboCategoria" class ="form-control" asp-items="ViewBag.IdCategoria"></select>
             </div>
             <div>
-                <button type="button" class="btn btn-secondary" onclick="adicionar()">Incluir</button>
+                <button type="button" class="btn btn-secondary my-2" onclick="adicionar()">Incluir</button>
             </div>
+        <form asp-action="Create">
+
             <div>
-                <table class="table" id="tabelaProdutos">
-                    <thead>
+                <table class="table table-primary table-borderless table-st" id="tabelaProdutos">
+                    <thead class="table-secondary">
                         <tr>
                             <th>
                                 Nome
@@ -57,7 +58,7 @@
                 </table>
             </div>
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary my-2" />
             </div>
         </form>
     </div>

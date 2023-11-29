@@ -29,17 +29,16 @@
                 <span asp-validation-for="Preco" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DataCriacao" class="control-label"></label>
-                <input asp-for="DataCriacao" class="form-control" />
+                <input asp-for="DataCriacao" type="hidden" class="form-control" />
                 <span asp-validation-for="DataCriacao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdCategoria" class="control-label"></label>
+                <label asp-for="IdCategoria" class="control-label">Categoria</label>
                 <select asp-for="IdCategoria" class="form-control" asp-items="ViewBag.IdCategoria"></select>
                 <span asp-validation-for="IdCategoria" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary my-2" />
             </div>
         </form>
     </div>
